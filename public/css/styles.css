@@ -88,4 +88,43 @@ ul.main-menu li a:hover {
     font-size: 31px;
 }
 
+.fon {
+    background: rgba(27, 30, 33, 0.51);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.window.main-section {
+    margin: auto;
+    width: 300px;
+    margin-top: 60px;
+    z-index: 101;
+    min-height: 430px;
+    position: relative;
+}
+.close {
+    text-align: right;
+}
+.window.main-section .confirm {
+    color: black;
+    font-family: 'Roboto', serif;
+    font-weight: bold;
+}
+.close img {
+    width: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
 
+.window.main-section button{
+    color: white;
+    background: #1063ac;
+    border: 0;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 9px;
+}
