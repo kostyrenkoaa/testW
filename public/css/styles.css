@@ -1,0 +1,91 @@
+body {
+    background: #85a5d4;
+}
+
+ul.main-menu {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul.main-menu li a {
+    font-family: Roboto, serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+ul.main-menu li a:hover {
+    color: #d49957;
+}
+
+.main-section {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    justify-content: center;
+    -webkit-flex-flow: row wrap;
+}
+
+.main-section .item {
+    background: #fff;
+    color: #5673d6;
+    flex-basis: 300px;
+    min-height: 365px;
+}
+
+.main-section .item {
+    text-align: center;
+}
+
+.main-section .item .field {
+    margin: 10px;
+    min-height: 340px;
+    cursor: pointer;
+}
+.main-section .item .field:hover {
+    background: #d5d6d7;
+}
+
+.main-section .img-section {
+    height: 150px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    justify-content: center;
+    -webkit-flex-flow: row wrap;
+}
+
+.main-section .img-section img {
+    width: 100px;
+}
+
+.main-section .name-section h2 {
+    text-transform: uppercase;
+    margin-top: 24px;
+}
+
+.main-section .info-section > p {
+    margin: 20px 0;
+    color: #b2b1b1;
+}
+.main-section .price-section > div {
+    display: inline-block;
+    position: relative;
+}
+
+.main-section .price-section .currency {
+    position: relative;
+    bottom: 11px;
+    left: 4px;
+}
+
+.main-section .price-section .price > span {
+    font-size: 31px;
+}
+
+
