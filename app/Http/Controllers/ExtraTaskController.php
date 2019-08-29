@@ -21,11 +21,17 @@ class ExtraTaskController extends Controller
     {
         $form = new AmountForm($request);
         if (!$form->isValid()) {
-            return $form->getError();
+            return response()->json([
+                'error' => $form->getError(),
+                'result' => ''
+            ]);
         }
 
         list($a, $b) = $form->getData();
 
-        return $amountService->getAmount($a, $b);
+        return response()->json([
+            'error' => '',
+            'result' => $amountService->getAmount($a, $b)
+        ]);
     }
 }

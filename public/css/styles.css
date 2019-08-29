@@ -44,6 +44,7 @@ ul.main-menu li a:hover {
     min-height: 340px;
     cursor: pointer;
 }
+
 .main-section .item .field:hover {
     background: #d5d6d7;
 }
@@ -73,6 +74,7 @@ ul.main-menu li a:hover {
     margin: 20px 0;
     color: #b2b1b1;
 }
+
 .main-section .price-section > div {
     display: inline-block;
     position: relative;
@@ -97,6 +99,7 @@ ul.main-menu li a:hover {
     height: 100%;
     z-index: 100;
 }
+
 .window.main-section {
     margin: auto;
     width: 300px;
@@ -105,14 +108,17 @@ ul.main-menu li a:hover {
     min-height: 430px;
     position: relative;
 }
+
 .close {
     text-align: right;
 }
+
 .window.main-section .confirm {
     color: black;
     font-family: 'Roboto', serif;
     font-weight: bold;
 }
+
 .close img {
     width: 10px;
     margin-right: 10px;
@@ -120,11 +126,27 @@ ul.main-menu li a:hover {
     cursor: pointer;
 }
 
-.window.main-section button{
+.window.main-section button {
     color: white;
     background: #1063ac;
     border: 0;
     padding: 7px;
     border-radius: 5px;
     margin-top: 9px;
+}
+
+.result-amount {
+    font-family: Roboto, serif;
+}
+
+.result-amount h2, .result-amount .result {
+    color: #ffcc81;
+}
+
+.result-amount h2 {
+    color: #ffcc81;
+}
+
+.result-amount .error {
+    color: #b3232a;
 }
