@@ -16,3 +16,8 @@ Route::get('/extra_task', [
     'uses' => 'ExtraTaskController@showPage',
     'as' => 'extra_task'
 ]);
+
+Route::post('/extra_task', [
+    'uses' => 'ExtraTaskController@getResult',
+    'as' => 'getResult'
+]);

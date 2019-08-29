@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Forms\AmountForm;
+use App\Http\Services\AmountService;
 use Illuminate\Http\Request;
 
 class ExtraTaskController extends Controller
@@ -13,5 +15,17 @@ class ExtraTaskController extends Controller
         ];
 
         return view('extra_task', $params);
+    }
+
+    public function getResult(Request $request, AmountService $amountService)
+    {
+        $form = new AmountForm($request);
+        if (!$form->isValid()) {
+            return $form->getError();
+        }
+
+        list($a, $b) = $form->getData();
+
+        return $amountService->getAmount($a, $b);
     }
 }
