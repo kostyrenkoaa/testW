@@ -4,16 +4,30 @@ namespace App\Http\Services;
 
 class AmountService
 {
+    /**
+     * Возвращает результат сложение чисел ввиде строки
+     *
+     * @param string $a
+     * @param string $b
+     * @return string
+     */
     public function getAmount(string $a, string $b): string
     {
         if (strlen($a) > strlen($b)) {
-            return $this->getResult($a, $b);
+            return $this->summation($a, $b);
         }
 
-        return $this->getResult($b, $a);
+        return $this->summation($b, $a);
     }
 
-    private function getResult(string $a, string $b): string
+    /**
+     * Производит суммирование и возвращает его результат
+     *
+     * @param string $a
+     * @param string $b
+     * @return string
+     */
+    private function summation(string $a, string $b): string
     {
         $lenB = strlen($b);
         $result = '';

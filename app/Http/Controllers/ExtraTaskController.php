@@ -5,19 +5,32 @@ namespace App\Http\Controllers;
 use App\Http\Forms\AmountForm;
 use App\Http\Services\AmountService;
 use Illuminate\Http\Request;
+use \Illuminate\Http\JsonResponse;
 
 class ExtraTaskController extends Controller
 {
+    /**
+     * Action для вывода страницы
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function showPage()
     {
         $params = [
-            'title' => "Страница вывода тестового задания"
+            'title' => "Второе задание"
         ];
 
         return view('extra_task', $params);
     }
 
-    public function getResult(Request $request, AmountService $amountService)
+    /**
+     * Action для получения результатов вычисления
+     *
+     * @param Request $request
+     * @param AmountService $amountService
+     * @return JsonResponse
+     */
+    public function getResult(Request $request, AmountService $amountService): JsonResponse
     {
         $form = new AmountForm($request);
         if (!$form->isValid()) {

@@ -26,6 +26,9 @@
                 result: '',
             },
             methods: {
+                /**
+                 * Получение результата вычислений с серверной части приложения
+                 */
                 getResult: function () {
                     this.error = '';
                     this.result = '';

@@ -44,20 +44,24 @@ class AmountForm
      *
      * @return bool
      */
-    public function isValid()
+    public function isValid(): bool
     {
         return $this->isValid;
     }
 
     /**
      * Возвращает переданные данные
+     *
+     * @return array
      */
-    public function getData()
+    public function getData(): array
     {
         return $this->data;
     }
 
     /**
+     * Возвращает первую ошибку валидации формы
+     *
      * @return string
      */
     public function getError(): string

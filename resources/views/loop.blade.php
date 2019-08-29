@@ -69,12 +69,20 @@
                 showData: '',
             },
             methods: {
+                /**
+                 * Получение данных с сервера по id и открытие окна
+                 * @param id
+                 */
                 getData: function (id) {
                     axios.post('/getData/' + id)
                         .then(function (response) {
                             App.showData = response.data;
                         });
                 },
+
+                /**
+                 * Закрытие окна
+                 */
                 deleteShowData: function () {
                     App.showData = '';
                 }

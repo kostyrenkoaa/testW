@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use \Illuminate\Http\JsonResponse;
 
 class LoopController extends Controller
 {
+    /**
+     * @var array Данные для вывода информации
+     */
     private $data = [
         [
             'img' => 'device.svg',
@@ -27,17 +30,28 @@ class LoopController extends Controller
         ],
     ];
 
+    /**
+     * Action для вывода страницы
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function showPage()
     {
         $params = [
-            'title' => "Страница вывода тестового задания",
+            'title' => "Первое задание",
             'data' => json_encode($this->data)
         ];
 
         return view('loop', $params);
     }
 
-    public function getData($id)
+    /**
+     * Action для получения данных по id
+     *
+     * @param $id
+     * @return JsonResponse
+     */
+    public function getData($id): JsonResponse
     {
         $result = [];
         if (isset($this->data[$id])) {
