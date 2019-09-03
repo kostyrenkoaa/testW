@@ -37,7 +37,7 @@
                     formData.append('a', this.a);
                     formData.append('b', this.b);
 
-                    axios.post('/extra_task/', formData)
+                    axios.post('/extra_task', formData)
                         .then(function (response) {
                             App.error = response.data.error;
                             App.result = response.data.result;
